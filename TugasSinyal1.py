@@ -38,6 +38,20 @@ plt.title('Frequency Spectrum')
 plt.tight_layout()
 plt.show()
 
+# Performing convolution
+h = np.sin(2 * np.pi * 10 * t)  # A new sine wave with frequency of 5 Hz
+
+# Compute the convolution
+convolved_signal = np.convolve(x, h, 'same')
+
+# Plot 
+# Plot the convolved signal in the time domain
+plt.subplot(2, 2, 3)
+plt.plot(t, convolved_signal)
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.title('Convolved Signal')
+
 
 
 
